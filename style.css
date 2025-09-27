@@ -1,3 +1,149 @@
+/* Attendee list styles */
+.attendee-list-section {
+  margin-top: 24px;
+  background: #f7fafd;
+  border-radius: 8px;
+  padding: 16px 18px 10px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.attendee-list-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.08rem;
+  color: #0071c5;
+}
+/* Form styles */
+.check-in {
+  margin: 0 auto 24px auto;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 24px 18px 18px 18px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.form-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0071c5;
+  margin-bottom: 12px;
+  display: block;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#attendeeName, #teamSelect {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #c7d7e6;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+#checkInBtn {
+  display: block;
+  margin: 12px auto 0 auto;
+  width: 180px;
+  padding: 12px 0;
+  background: #0071c5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#checkInBtn:hover {
+  background: #005fa3;
+}
+@media (min-width: 700px) {
+  .check-in {
+    padding: 24px 32px 18px 32px;
+    max-width: 700px;
+  }
+}
+  z-index: 1100;
+  min-width: 300px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: none;
+  animation: popBounce 0.7s;
+}
+.goal-popup.show {
+  display: block;
+}
+@keyframes popBounce {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/* Custom styled popup alert */
+.custom-alert {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #222;
+  border: 2px solid #0071c5;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 24px 32px 16px 32px;
+  z-index: 1000;
+  min-width: 260px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.close-btn-row {
+  margin-top: 18px;
+  text-align: center;
+}
+.close-alert {
+  background: #0071c5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.close-alert:hover {
+  background: #005fa3;
+}
+.custom-alert.show {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Modern reset */
 * {
   margin: 0;

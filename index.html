@@ -37,6 +37,22 @@
     <div class="container">
       <!-- Feedback message -->
       <p id="greeting"></p>
+      <!-- Custom popup for alerts -->
+      <div id="customAlert" class="custom-alert" style="display: none">
+        <span id="customAlertMsg"></span>
+        <div class="close-btn-row">
+          <button id="closeAlertBtn" class="close-alert">Close</button>
+        </div>
+      </div>
+      <!-- Popup for attendance goal reached -->
+      <div id="goalPopup" class="goal-popup" style="display: none">
+        <span id="goalPopupMsg"
+          >Congratulations - attendance goal reached!</span
+        >
+        <div class="close-btn-row">
+          <button id="closeGoalBtn" class="close-alert">Close</button>
+        </div>
+      </div>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -79,6 +95,11 @@
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
           </div>
+        </div>
+        <!-- Attendee list -->
+        <div class="attendee-list-section">
+          <h4>Attendees</h4>
+          <ul id="attendeeList" class="attendee-list"></ul>
         </div>
       </div>
     </div>
