@@ -13,10 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
     attendeeListEl.innerHTML = "";
     attendeeList.forEach(function (att) {
       const li = document.createElement("li");
-      li.textContent = att.name;
+      li.className = "attendee-row";
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "attendee-name";
+      nameSpan.textContent = att.name;
       const teamSpan = document.createElement("span");
       teamSpan.className = "attendee-team " + att.team;
-      teamSpan.textContent = att.teamName;
+      let emoji = "";
+      if (att.team === "water") {
+        emoji = "🌊 ";
+      } else if (att.team === "zero") {
+        emoji = "🌿 ";
+      } else if (att.team === "power") {
+        emoji = "⚡ ";
+      }
+      teamSpan.textContent = emoji + att.teamName;
+      li.appendChild(nameSpan);
       li.appendChild(teamSpan);
       attendeeListEl.appendChild(li);
     });
